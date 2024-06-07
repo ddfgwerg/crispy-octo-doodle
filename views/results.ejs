@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Results</title>
+</head>
+<body>
+  <h1>Data Statistics</h1>
+  <table>
+    <tr>
+      <th>Task</th>
+      <th>Core</th>
+      <th>Min</th>
+      <th>Max</th>
+      <th>Avg</th>
+      <th>Std</th>
+    </tr>
+    <% stats.forEach(stat => { %>
+      <tr>
+        <td><%= stat.task %></td>
+        <td><%= stat.core %></td>
+        <td><%= stat.min %></td>
+        <td><%= stat.max %></td>
+        <td><%= stat.avg %></td>
+        <td><%= stat.std %></td>
+      </tr>
+    <% }) %>
+  </table>
+  <h1>Standard Deviation Chart</h1>
+  <img src="<%= stdChart %>" alt="Standard Deviation Chart">
+</body>
+</html>
